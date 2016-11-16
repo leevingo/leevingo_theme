@@ -1,0 +1,16 @@
+name: Leevingo Theme
+description: Drupal 8 theme for Leevingo
+type: theme
+package: Leevingo
+screenshot: screenshot.png
+base theme: classy
+core: 8.x
+
+regions:
+  header: Header
+  content: Content
+  sidebar: Sidebar
+  footer: Footer
+
+libraries:
+  - leevingo_theme/global

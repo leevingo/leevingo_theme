@@ -1,0 +1,69 @@
+//
+//  Maintain ratio mixin.
+//    @param {List} [$ratio] Ratio the element needs to maintain. A 16:9 ratio would look like this:
+//    .element { @include maintain-ratio(16 9); }
+//
+@mixin maintain-ratio($ratio: 1 1) {
+  $width: 100%;
+  $height: percentage(nth($ratio, 2) / nth($ratio, 1));
+
+  width: $width;
+  height: 0;
+  padding-bottom: $height;
+}
+
+//
+// Include media query from breakpoint $from to breakpoint $to.
+//
+@mixin from($from, $to) {
+  $to: $to - 1;
+
+  @include media(min-width $from max-width $to) {
+    @content;
+  }
+}
+
+//
+// Include max-width: $breakpoint media query.
+//
+@mixin below($breakpoint) {
+  $breakpoint: $breakpoint - 1;
+
+  @include media(max-width $breakpoint) {
+    @content;
+  }
+}
+
+@mixin underline($color) {
+  background: linear-gradient($color,$color),linear-gradient($color,$color),linear-gradient($color,$color);
+  background-size: .05em 0,.05em 0,1px 1px;
+  background-repeat: no-repeat,no-repeat,repeat-x;
+  background-position: 0 87%,100% 87%,0 85%;
+}
+
+@mixin iconfont() {
+  font-family: "fontello";
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  text-align: center;
+
+  /* For safety - reset parent styles, that can break glyph codes*/
+  font-variant: normal;
+  text-transform: none;
+
+  /* fix buttons height, for twitter bootstrap */
+  line-height: 1em;
+
+  /* Font smoothing. That was taken from TWBS */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  /* Uncomment for 3D effect */
+  /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
+}

@@ -1,0 +1,41 @@
+//------------------------------------------------------------------
+// [Layout]
+//------------------------------------------------------------------
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+main {
+  max-width: 2800px;
+  margin: 0 auto;
+}
+main {
+  min-height: 300px;
+  @include clearfix;
+  position: relative;
+  overflow: hidden;
+}
+#content {
+  @include span-columns(12);
+}
+.outer-wrapper {
+  @include outer-container;
+}
+
+@include media($small) {
+  .has-sidebar #content {
+    @include span-columns(8);
+  }
+  #sidebar {
+    @include span-columns(4);
+  }
+}
+#site-header,
+main {
+  padding: 1rem $large-spacing;
+}
+#site-footer {
+  padding: $large-spacing;
+}

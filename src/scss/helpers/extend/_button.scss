@@ -1,0 +1,25 @@
+@mixin button-base {
+  display: inline-block;
+  padding: $small-spacing $large-spacing;
+  background-color: color(medium-light-gray);
+  letter-spacing: $base-letter-spacing;
+  color: color(dark-gray);
+  text-transform: uppercase;
+  border: 0;
+
+  &:focus,
+  &:hover {
+    background-color: color(medium-gray);
+  }
+}
+
+%button {
+  @include button-base;
+}
+
+%button--red {
+  @include button-base;
+  padding: $small-spacing $large-spacing;
+  color: white;
+  background-color: color(red);
+}

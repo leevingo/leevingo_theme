@@ -1,0 +1,64 @@
+/*------------------------------------------------------------------
+[Variables]
+
+General variables used throughout the project.
+-------------------------------------------------------------------*/
+
+// Typography
+$signika-negativ: "Signika Negativ", signika_negative, sans-serif;
+$source_sans: "source_sans_probold", open_sans, sans-serif;
+$aller: "aller", open_sans, sans-serif;
+$crimson: "crimson", open_sans, sans-serif;
+
+$base-font-family: $signika-negativ;
+$heading-font-family: $base-font-family;
+
+$base-letter-spacing: 0.05em;
+
+// Font Sizes
+$base-font-size: 1.6rem;
+$font-size-smaller: 1.75rem;
+$font-size-small: 1.5rem;
+$font-size-medium: 2.25rem;
+$font-size-large: 2.5rem;
+$font-size-larger: 3rem;
+$font-size-cta: $font-size-large;
+$font-size-heading-1: 5.5rem;
+$font-size-heading-2: 4.4rem;
+$font-size-heading-3: 4rem;
+$font-size-heading-4: 3.5rem;
+$font-size-heading-5: 2.5rem;
+
+// Line height
+$base-line-height: 1.5;
+$heading-line-height: 1.2;
+
+// Border
+$base-border-color: map-get($colors, light-gray);
+$base-border: 1px solid $base-border-color;
+
+// Background Colors
+$base-background-color: #fff;
+$secondary-background-color: tint($base-border-color, 75%);
+
+// Animations
+$base-duration: 150ms;
+$base-timing: ease;
+
+// Header & Card sizes
+$header-height: 60rem;
+$header-height-on-medium: 50rem;
+$header-height-on-small: 40rem;
+$card-height: 45rem;
+$card-height-on-small: 35rem;
+$team-member-height: 50rem;
+
+// Other Sizes
+$base-border-radius: 0.5em;
+$base-spacing: $base-line-height * 1.5rem;
+$large-spacing: 2rem;
+$small-spacing: $base-spacing / 2;
+$tiny-spacing: $base-spacing / 4;
+$base-z-index: 0;
+$max-width-centered: 875px;
+$border-width: 2px;

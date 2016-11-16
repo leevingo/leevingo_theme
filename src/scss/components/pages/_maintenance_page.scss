@@ -1,0 +1,15 @@
+.maintenance-page-content {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+
+  .maintenance-page-image {
+    width: 220px;
+  }
+  .maintenance-page-text {
+    text-transform: uppercase;
+    text-align: center;
+  }
+}

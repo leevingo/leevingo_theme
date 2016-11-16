@@ -1,0 +1,23 @@
+{
+  "name": "Wunderkit",
+  "version": "0.0.1",
+  "description": "Wunderkraut Belgium scaffolding starter kit.",
+  "private": true,
+  "devDependencies": {
+    "slick-carousel": "~1.6.0",
+    "matchHeight": "liabru/jquery-match-height#~0.7.0"
+  },
+  "install": {
+    "path": {
+      "css": "../vendor/css",
+      "js": "../vendor/js"
+    },
+    "ignore": [
+      "slick-carousel",
+      "jquery"
+    ]
+  },
+  "dependencies": {
+    "material-design-iconic-font": "~2.2.0"
+  }
+}

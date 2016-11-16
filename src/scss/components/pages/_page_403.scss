@@ -1,0 +1,15 @@
+.page-403-content {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+
+  .page-403-image {
+    width: 220px;
+  }
+  .page-403-text {
+    text-transform: uppercase;
+    text-align: center;
+  }
+}

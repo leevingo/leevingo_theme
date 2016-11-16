@@ -1,0 +1,53 @@
+<?php
+/**
+ * @file
+ * Functions to support theming in the Leevingo theme.
+ */
+
+
+/**
+ * Implements hook_theme_suggestions_HOOK_alter().
+ */
+function leevingo_theme_theme_suggestions_page_alter(array &$suggestions, array $variables) {
+
+  $route_name = \Drupal::service('current_route_match')->getRouteName();
+  switch ($route_name) {
+    case 'system.404':
+      $suggestions[] = 'page__404';
+      break;
+    case 'system.403':
+      $suggestions[] = 'page__403';
+      break;
+  }
+}
+
+/**
+ * Preprocesses the maintenance page.
+ * @param $variables
+ */
+function leevingo_theme_preprocess_maintenance_page(&$variables) {
+  // Add the animated gif.
+  $variables['logo_anim'] = "/themes/custom/leevingo_theme/images/leevingo_anim.gif";
+}
+
+/**
+ * Preprocesses the 404 page not found page.
+ *
+ * @param $variables
+ */
+function leevingo_theme_preprocess_page__404(&$variables) {
+  // Add the animated gif.
+  $variables['logo_anim'] = "/themes/custom/leevingo_theme/images/leevingo_anim.gif";
+  $variables['text'] = t('Page not found');
+}
+
+/**
+ * Preprocesses the 404 page not found page.
+ *
+ * @param $variables
+ */
+function leevingo_theme_preprocess_page__403(&$variables) {
+  // Add the animated gif.
+  $variables['logo_anim'] = "/themes/custom/leevingo_theme/images/leevingo_anim.gif";
+  $variables['text'] = t('Access Denied');
+}

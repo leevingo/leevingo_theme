@@ -1,0 +1,24 @@
+/*------------------------------------------------------------------
+[Colors]
+-------------------------------------------------------------------*/
+
+$colors: (
+  dark-gray: #333,
+  medium-gray: #666,
+  medium-light-gray: #999,
+  light-gray: #ddd,
+  lighter-gray: #ebebeb,
+  lightest-gray: #f6f6f6,
+  red: #EE0001,
+);
+// used #FF7537 instead of #e56716 > this color seems not bright enough
+
+// Font Colors
+$base-font-color: color(medium-gray);
+$action-color: color(dark-gray);
+$read-more-color: color(medium-gray-2);
+
+$secondary-menu-item-color: #B8B2B2;
+$main-menu-item-color: #000;
+
+$footer-background-color: #000;

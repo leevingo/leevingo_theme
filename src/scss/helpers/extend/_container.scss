@@ -1,0 +1,67 @@
+%container {
+  @include outer-container;
+}
+
+%container-centered {
+  @include media($small) {
+    @include outer-container($small);
+  }
+
+  @include media($medium) {
+    @include outer-container($max-width-centered);
+  }
+}
+
+%container-half-width {
+  @include media($medium) {
+    width: 50%;
+    max-width: $max-width / 2;
+    position: relative;
+    float: left;
+    left: 50%;
+    transform: translateX(-100%);
+
+    // Clear everything that immediately follows.
+    & + & + * {
+      clear: left;
+    }
+  }
+}
+
+%container-half-width-centered {
+  @include media($medium) {
+    width: 50%;
+    max-width: $max-width-centered / 2;
+    position: relative;
+    float: left;
+    left: 50%;
+    transform: translateX(-100%);
+
+    // Clear everything that immediately follows.
+    & + & + * {
+      clear: left;
+    }
+  }
+}
+
+%container-third-width {
+  @include media($small) {
+    float: left;
+    width: 50%;
+  }
+
+  @include media($medium) {
+    width: 100 / 3 * 1%;
+    max-width: $max-width / 3;
+    position: relative;
+    left: 50%;
+    // Technically it should be -150% but probably due to rounding
+    // errors -149% results in equal margins left and right.
+    transform: translateX(-149%);
+
+    // Sort into rows by 3.
+    &:nth-child(3n+4) {
+      clear: left;
+    }
+  }
+}
